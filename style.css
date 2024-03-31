@@ -331,24 +331,25 @@ input:focus, textarea:focus{
     position: relative;
     overflow: hidden;
 }
+
 .portfolio-card:nth-child(1){
-    background-image: url("img/megablog.png");
+    background-image: url("img/skill-boost.png");
 }
 .portfolio-card:nth-child(2){
-    background-image: url("img/bg-changer.png");
+    background-image: url("img/megablog.png");
 }
 .portfolio-card:nth-child(3){
-    background-image: url("img/guess-the-number-game.png");
+    background-image: url("img/bg-changer.png");
 }
 .portfolio-card:nth-child(4){
-    background-image: url("img/bmi-calculator.png");
+    background-image: url("img/guess-the-number-game.png");
 }
 .portfolio-card:nth-child(5){
+    background-image: url("img/bmi-calculator.png");
+}
+.portfolio-card:nth-child(6){
     background-image: url("img/password-generator.png");
 }
-/* .portfolio-card:nth-child(6){
-    background-image: url("project/");
-} */
 .portfolio-card::before{
     content: "";
     background: var(--black);
