@@ -321,12 +321,89 @@ input:focus, textarea:focus{
 }
 
 
+/* ---Portfolio section--- */
+.portfolio-card{
+    width: 20rem;
+    height: 12rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-card:nth-child(1){
+    background-image: url("img/megablog.png");
+}
+.portfolio-card:nth-child(2){
+    background-image: url("img/bg-changer.png");
+}
+.portfolio-card:nth-child(3){
+    background-image: url("img/guess-the-number-game.png");
+}
+.portfolio-card:nth-child(4){
+    background-image: url("img/bmi-calculator.png");
+}
+.portfolio-card:nth-child(5){
+    background-image: url("img/password-generator.png");
+}
+/* .portfolio-card:nth-child(6){
+    background-image: url("project/");
+} */
+.portfolio-card::before{
+    content: "";
+    background: var(--black);
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition:opacity .3s ease-in-out;
+}
+.portfolio-card:hover::before{
+    opacity: .8;
+}
+.demo{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: -20%;
+    transition: top .3s ease-in-out;
+}
+.portfolio-card:hover .demo{
+    top: 50%;
+}
 
 
-
-
-
-
+/* ---Services section--- */
+.grid-card-container{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr) ;
+    grid-template-rows: repeat(2 , 1fr) ;
+    grid-row-gap: 3.5rem;
+    grid-column-gap: 2rem;
+}
+.card{
+    background: var(--white);
+    padding: 1rem 0 0 2rem;
+    text-align: left;
+    border-radius: 0 40% 0 0;
+}
+[data-type="card-icons"]{
+    font-size: 1.5rem;
+    margin-bottom:1.5rem;
+    background: var(--primary-pink);
+    padding: 1rem;
+    border-radius: 5rem;
+}
+.card:hover{
+    background: var(--primary-pink);
+    cursor: pointer;
+}
+.card:hover.card p, .card:hover.card h4{
+    color: var(--white);
+}
+.card:hover [data-type="card-icons"]{
+    background: var(--white);
+    color: var(--primary-pink);
+}
 
 
 
@@ -355,6 +432,7 @@ input:focus, textarea:focus{
     .hamburger{
         display: block;
     }
+    
     .image-container{
         display: none;
     }
